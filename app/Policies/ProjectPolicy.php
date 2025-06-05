@@ -20,4 +20,6 @@ class ProjectPolicy
     {
         return $project->owner_id === $user->id || $project->users()->where('user_id', $user->id)->where('role', 'admin')->exists();
     }
+
+
 }
